@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo/Lai.png" alt="Lai-banner" style="width:450px; height: 350px;"/>
+  <img src="assets/logo/Lai.png" alt="Lai-banner" style="width:300px;"/>
 </p>
 
 # 🤖 Lai
