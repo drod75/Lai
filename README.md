@@ -37,7 +37,7 @@ tbd
 
 ### 🤖 Timeline
 
-<img src="assets/images/Cool-AD.png" alt="Lai-timeline" style="width: 600px; max-width: 100%;" />
+<img src="assets/images/Cool-AD.png" alt="Lai-timeline" style="width: 1000px; max-width: 100%; height: 600px; max-height: 80%;" />
 
 ## 🤖 Features
 
