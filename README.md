@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo/Lai.png" alt="Lai-banner" style="width:600px"/>
+  <img src="assets/logo/Lai.png" alt="Lai-banner" style="width:450px; height: 350px;"/>
 </p>
 
 # 🤖 Lai
@@ -37,7 +37,7 @@ tbd
 
 ### 🤖 Timeline
 
-<img src="assets/images/Cool-AD.png" alt="Lai-timeline" style="width: 600px; max-width: 100%; height: 300px;" />
+<img src="assets/images/Cool-AD.png" alt="Lai-timeline" style="width: 600px; max-width: 100%;" />
 
 ## 🤖 Features
 
