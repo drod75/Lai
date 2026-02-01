@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
   <img src="assets/logo/Lai.png" alt="Lai-banner" style="width:300px;"/>
 </p>
 
