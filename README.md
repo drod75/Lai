@@ -36,8 +36,9 @@ If you wish to contact me for anything related to this project, feel free to rea
 tbd
 
 ### 🤖 Timeline
-
-<img src="assets/images/Cool-AD.png" alt="Lai-timeline" style="width: 1000px; max-width: 100%; height: 600px; max-height: 80%;" />
+<p align="left">
+    <img src="assets/images/Cool-AD.png" alt="Lai-timeline" style="width: 1000px; max-width: 100%; height: 600px; max-height: 80%;" />
+</p>
 
 ## 🤖 Features
 
