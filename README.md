@@ -20,7 +20,7 @@ If you wish to contact me for anything related to this project, feel free to rea
   
 - [🤖 Lai](#-lai)
   - [🤖 Introduction](#-introduction)
-    - [Timeline](#timeline)
+    - [🤖 Timeline](#-timeline)
   - [🤖 Features](#-features)
     - [🤖 Built With](#-built-with)
   - [🤖 Getting Started](#-getting-started)
@@ -35,7 +35,7 @@ If you wish to contact me for anything related to this project, feel free to rea
 ## 🤖 Introduction
 tbd
 
-### Timeline
+### 🤖 Timeline
 
 <img src="assets/images/Cool-AD.png" alt="Lai-timeline" style="width: 600px; max-width: 100%;" />
 
