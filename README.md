@@ -19,56 +19,64 @@ If you wish to contact me for anything related to this project, feel free to rea
   <summary>Table of Contents</summary>
   
 - [🤖 Lai](#-lai)
-  - [🤖 Introduction](#-introduction)
-    - [🤖 Timeline](#-timeline)
-  - [🤖 Features](#-features)
-    - [🤖 Built With](#-built-with)
-  - [🤖 Getting Started](#-getting-started)
-    - [🤖 Prerequisites](#-prerequisites)
-    - [🤖 Setup](#-setup)
-  - [🤖 Demo](#-demo)
-    - [🤖 Demonstration Videos](#-demonstration-videos)
-  - [🤖 Contributing](#-contributing)
-  - [🤖 License](#-license)
+  - [Introduction](#introduction)
+    - [Timeline](#timeline)
+  - [Features](#features)
+    - [Built With](#built-with)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+  - [Demo](#demo)
+    - [Demonstration Videos](#demonstration-videos)
+      - [Demo 1: TBD](#demo-1-tbd)
+      - [Demo 2: TBD](#demo-2-tbd)
+  - [Contributing](#contributing)
+  - [License](#license)
 </details>
 
-## 🤖 Introduction
+## Introduction
 tbd
 
-### 🤖 Timeline
-<p align="left">
-    <img src="assets/images/Cool-AD.png" alt="Lai-timeline" style="width: 1000px; max-width: 100%; height: 600px; max-height: 80%;" />
-</p>
+### Timeline
+Image of the projected project timeline.
+![timeline](assets/images/Cool-AD.png)
 
-## 🤖 Features
+## Features
 
-### 🤖 Built With
+### Built With
 - [Python](https://www.python.org/)
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
-## 🤖 Getting Started
+## Getting Started
 tbd
 
-### 🤖 Prerequisites
+### Prerequisites
 tbd
 
-### 🤖 Setup
+### Setup
 tbd
 
-## 🤖 Demo
-In order to demonstrate the capabilities of Lai, various debates and usage example were recorded and can be found in the repository under the `assets/demo` folder.
+## Demo
+In order to demonstrate the capabilities of Lai, various debates and usage example were/will be recorded and can be found in the repository under the `assets/demo/` folder.
 
-### 🤖 Demonstration Videos
-- [TBD 1]()
-- [TBD 2]()
-- [TBD 3]()
-- [TBD 4]()
-- [TBD 5]()
+### Demonstration Videos
+Each of the following demonstration videos will show not only the current capability of the AI tool, but also show people's live reaction and thoughts of the process, and the results.
+
+#### Demo 1: TBD
+tbd
+
+Video Link: [TBD]()
+
+#### Demo 2: TBD
+tbd
+
+Video Link: [TBD]()
+
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
-## 🤖 Contributing
+## Contributing
 Contributions to this repository are welcome! If you wish to contribute, please follow the guidelines below.
 
 Heres how you can contribute:
@@ -79,5 +87,5 @@ Heres how you can contribute:
 5. Submit a pull request
 
 
-## 🤖 License
+## License
 This project is licensed under the Apache 2.0 License - see the [LICENSE](https://github.com/drod75/Lai/blob/main/LICENSE) file for details.
