@@ -36,6 +36,7 @@ st.audio(audio_value)
 
 with st.expander("Speech to Text Test!"):
     if audio_value:
+        st.markdown(type(audio_value))
         transcription = st.session_state["elevenlabs"].speech_to_text.convert(
             file=audio_value,
             model_id="scribe_v2",
@@ -43,7 +44,7 @@ with st.expander("Speech to Text Test!"):
             language_code="eng",
             diarize=True,
         )
-
+        st.markdown(type(transcription))
         st.markdown(transcription.text)
 
     else:
