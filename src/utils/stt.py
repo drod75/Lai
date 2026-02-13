@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 def speech_to_text(audio):
     """The function `speech_to_text` takes an audio file as input and uses a specified model to transcribe
     the speech in the file, with options to tag audio events, specify language, and annotate speakers.
@@ -17,7 +18,9 @@ def speech_to_text(audio):
     to annotate who is speaking in the audio.
 
     """
-    transcription = st.session_state["elevenlabs"].speech_to_text.convert(
+    transcription = st.session_state[
+        "elevenlabs"
+    ].speech_to_text.convert(
         file=audio,
         model_id="scribe_v2",  # Model to use
         tag_audio_events=True,  # Tag audio events like laughter, applause, etc.
