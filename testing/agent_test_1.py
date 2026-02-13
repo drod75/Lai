@@ -4,7 +4,6 @@ IMPORTANT!!!
 This file if you want to test it, needs to be moved to the main folder, to avoid relative importing issues.
 """
 
-
 from src.agent.agent import agent_pipeline
 from src.utils.stt import speech_to_text
 import streamlit as st
@@ -57,7 +56,7 @@ with st.expander("Speech to Text Test!"):
             {"messages": [{"role": "user", "content": transcript}]}
         )
 
-        st.markdown(result['messages'][-1].content[-1]['text'])
+        st.markdown(result["messages"][-1].content[-1]["text"])
 
     else:
         st.warning("No audio yet! :(")
