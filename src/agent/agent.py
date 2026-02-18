@@ -10,7 +10,7 @@ from src.agent.tools.tools import give_tools
 def create_model(
     provider: Literal["Google", "Ollama"],
     model_type: Literal[
-        "llama3.2:1b", "llama3.2:3b", "gemma3:4b", "gemini-3-flash", "gemini-2.5-flash"
+        "llama3.2:1b", "llama3.2:3b", "gemini-3-flash", "gemini-2.5-flash"
     ],
 ):
     """The function `create_model` creates a chatbot model based on the specified provider and model type.
