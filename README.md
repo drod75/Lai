@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="assets/logo/Lai.png" alt="Lai-banner" style="width:300px;"/>
+  <img src="docs/assets/logo/Lai.png" alt="Lai-banner" style="width:300px;"/>
 </p>
 
 # 🤖 Lai
@@ -41,7 +41,7 @@ tbd
 Image of the projected project timeline.
 
 <p align="center">
-  <img src="assets/images/Cool-AD.png" alt="timeline" width="90%">
+  <img src="docs/assets/images/Cool-AD.png" alt="timeline" width="90%">
 </p>
 
 ## Features
@@ -61,7 +61,7 @@ tbd
 tbd
 
 ## Demo
-In order to demonstrate the capabilities of Lai, various debates and usage example were/will be recorded and can be found in the repository under the `assets/demo/` folder.
+In order to demonstrate the capabilities of Lai, various debates and usage example were/will be recorded and can be found in the repository under the `docs/assets/demo/` folder.
 
 ### Demonstration Videos
 Each of the following demonstration videos will show not only the current capability of the AI tool, but also show people's live reaction and thoughts of the process, and the results.
