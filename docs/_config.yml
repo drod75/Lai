@@ -1,7 +1,2 @@
 title: Lai
 description: The journey and documentation of Lai.
-markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
-  syntax_highlight: rouge
