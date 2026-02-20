@@ -27,8 +27,8 @@
                 </div>
                 <ul tabindex="-1"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a href="/lai/page1">Source Code</a></li>
-                    <li><a href="/lai/page2">Analysis</a></li>
+                    <li><a href="{{ '/page1.html' | relative_url }}">SourceCode</a></li>
+                    <li><a href="{{ '/page2.html' | relative_url }}">Analysis</a></li>
                 </ul>
             </div>
         </div>
@@ -40,8 +40,6 @@
 
 <body>
     <h1> {{site.description}} </h1>
-    <p>Hello, World!</p>
-
     {{content}}
 </body>
 
