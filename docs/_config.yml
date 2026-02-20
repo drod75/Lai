@@ -3,3 +3,4 @@ description: The journey and documentation of Lai.
 domain: drod75.github.io
 url: https://drod75.github.io/
 baseurl: /Lai/
+markdown: GFM
