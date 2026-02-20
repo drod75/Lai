@@ -1,5 +1,6 @@
 ---
 title: "Home Page"
+layout: default
 ---
 
 <p align="left">
