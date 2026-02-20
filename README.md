@@ -40,8 +40,8 @@ tbd
 ### Timeline
 Image of the projected project timeline.
 
-<p align="center">
-  <img src="docs/assets/images/Cool-AD.png" alt="timeline" width="90%">
+<p align="center" style="background-color: white;">
+  <img src="docs/assets/images/timeline.png" alt="timeline" width="90%">
 </p>
 
 ## Features
