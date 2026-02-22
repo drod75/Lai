@@ -25,8 +25,8 @@ layout: default
         {% assign section_name = section_file[0] %}
         {% if section_name != "introduction" %}
             <div class="py-8">
-                <h2 class="text-3xl font-bold">{{ section_name | capitalize }}</h2>
-                {% for item in section_file[1] %}
+                <h2 class="text-3xl font-bold">{{ section_file[1].title | capitalize }}</h2>
+                {% for item in section_file[1].items %}
                     <div class="mt-4">
                         <h3 class="text-2xl font-bold">{{ item.title }}</h3>
                         <p>{{ item.description }}</p>
