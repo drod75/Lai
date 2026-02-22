@@ -23,15 +23,22 @@ layout: default
 
     {% for section_file in site.data.home %}
         {% assign section_name = section_file[0] %}
+        {% assign section_data = section_file[1] %}
+        
         {% if section_name != "introduction" %}
             <div class="py-8">
-                <h2 class="text-3xl font-bold">{{ section_file[1].title | capitalize }}</h2>
-                {% for item in section_file[1].items %}
-                    <div class="mt-4">
-                        <h3 class="text-2xl font-bold">{{ item.title }}</h3>
-                        <p>{{ item.description }}</p>
-                    </div>
-                {% endfor %}
+                <h2 class="text-3xl font-bold border-b-2 border-green-500 pb-2 mb-6">
+                    {{ section_data.title }}
+                </h2>
+                
+                <div class="grid grid-cols-1 gap-6">
+                    {% for item in section_data.items %}
+                        <div class="p-5 bg-white rounded-lg shadow-sm border-l-4 border-green-600">
+                            <h3 class="text-2xl font-bold text-green-900">{{ item.title }}</h3>
+                            <p class="text-gray-700 mt-2">{{ item.description }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         {% endif %}
     {% endfor %}
