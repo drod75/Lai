@@ -2,3 +2,26 @@ title: Details
 items:
   - title: Quick Summary
     description: The AI Agent uses web scraping and searching, powered by it's system prompt with specific instructions, to search and find info based on statements made by a user.
+  - title: Technologies Used
+    description: The following technologies were utilized to build the Lai assistant.
+    categories:
+      - name: "Language"
+        techs:
+          - name: "Python"
+            shield: "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+      - name: "AI & Logic"
+        techs:
+          - name: "Gemini"
+            shield: "https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white"
+          - name: "LangChain"
+            shield: "https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white"
+      - name: "Tools & Voice"
+        techs:
+          - name: "Tavily"
+            shield: "https://img.shields.io/badge/Tavily-FF5733?style=for-the-badge&logo=search&logoColor=white"
+          - name: "Eleven Labs"
+            shield: "https://img.shields.io/badge/Eleven_Labs-121212?style=for-the-badge&logo=audiomack&logoColor=white"
+      - name: "UI"
+        techs:
+          - name: "Streamlit"
+            shield: "https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"

@@ -31,6 +31,21 @@ layout: default
                 <div class="p-5 bg-white rounded-lg shadow-sm border-l-4 border-blue-600">
                     <h3 class="text-2xl font-bold text-blue-900">{{ item.title }}</h3>
                     <p class="text-gray-700 mt-2">{{ item.description }}</p>
+
+                    {% if item.title == "Technologies Used" and item.categories %}
+                        <div class="mt-6 space-y-4">
+                            {% for category in item.categories %}
+                                <div>
+                                    <span class="text-sm font-bold uppercase tracking-wider text-blue-600">{{ category.name }}</span>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        {% for tech in category.techs %}
+                                            <img src="{{ tech.shield }}" alt="{{ tech.name }}">
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
