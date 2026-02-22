@@ -1,75 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="nord">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> {{site.title}} </title>
-    <meta name="description" content>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-</html>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> {{site.title}} </title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-    <div class="navbar bg-base-100 shadow-sm">
-        <div class="navbar-start">
-            <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h8m-8 6h16" />
-                    </svg>
-                </div>
-                <ul tabindex="-1"
-                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a class="font-bold text-xl" href="/Lai/page1">Source Code</a></li>
-                    <li><a class="font-bold text-xl" href="/Lai/page2">Analysis</a></li>
-                </ul>
-            </div>
-            <a class="btn btn-ghost text-blue-600 text-4xl italic" href="/Lai">Lai</a>
+  <div class="navbar bg-base-100 shadow-sm">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
         </div>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-                <li><a class="font-bold" href="/Lai/page1">Source Code</a></li>
-                <li><a class="font-bold" href="/Lai/page2">Analysis</a></li>
-            </ul>
-        </div>
-        <div class="navbar-end">
-        </div>
+        <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+          <li><a class="font-bold text-xl" href="/Lai/page1">Source Code</a></li>
+          <li><a class="font-bold text-xl" href="/Lai/page2">Analysis</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost text-blue-600 text-4xl italic" href="/Lai">Lai</a>
     </div>
-
-    <div class="m-12">
-        {{content}}
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a class="font-bold" href="/Lai/page1">Source Code</a></li>
+        <li><a class="font-bold" href="/Lai/page2">Analysis</a></li>
+      </ul>
     </div>
+    <div class="navbar-end">
+    </div>
+  </div>
 
-    <footer class="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
-        <div class="footer-socials" style="display: flex; gap: 15px; align-items: center;">
-            <a href="https://www.linkedin.com/in/david-rodriguez-nyc" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-            </a>
+  <div class="m-12">
+    {{content}}
+  </div>
 
-            <a href="mailto:dr507498@gmail.com" aria-label="Email">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-            </a>
-        </div>
-    </footer>
+  <footer class="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
+    <div class="footer-socials" style="display: flex; gap: 15px; align-items: center;">
+      <a href="https://www.linkedin.com/in/david-rodriguez-nyc" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+        </svg>
+      </a>
+
+      <a href="mailto:dr507498@gmail.com" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </a>
+    </div>
+  </footer>
 
 </body>
 
