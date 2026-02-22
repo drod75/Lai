@@ -1,4 +1,4 @@
-title: Summary Section
+title: Details
 items:
   - title: Quick Summary
     description: The AI Agent uses web scraping and searching, powered by it's system prompt with specific instructions, to search and find info based on statements made by a user.
