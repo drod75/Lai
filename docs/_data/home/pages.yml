@@ -1,0 +1,6 @@
+title: Site Pages
+items:
+ - title: Source Page
+   description: This page contains the documentation for each file within the repository that contributes to the site itself. The page is divided into sections based on the tree structure of the repository folder itself. 
+ - title: Analysis Page
+   description: This page contains the various live demonstrations of the project, and the graphs that are associated with them. The videos demonstrations will not only be used for seeing how to tweak the prompt and model usage, but for a more Data Analysis approach to showcasing metrics and statistics.
