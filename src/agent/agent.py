@@ -104,7 +104,7 @@ def create_prompt():
 def agent_pipeline(
     provider: Literal["Google", "Ollama"],
     model_type: Literal[
-        "llama3.2:1b", "llama3.2:3b", "gemma3:4b", "gemini-3-flash", "gemini-2.5-flash"
+        "llama3.2:1b", "llama3.2:3b", "", "gemini-3-flash", "gemini-2.5-flash"
     ],
 ):
     """The function `agent_pipeline` creates an agent with a specified provider and model type.
@@ -114,7 +114,7 @@ def agent_pipeline(
     provider : Literal["Google", "Ollama"]
         The `provider` parameter specifies the provider of the agent model. It can be either "Google" or
     "Ollama".
-    model_type : Literal["llama3.2:1b", "llama3.2:3b", "gemma3:4b", "gemini-3-flash"]
+    model_type : Literal["llama3.2:1b", "llama3.2:3b", "gemini-3-flash"]
         The `model_type` parameter specifies the type of model to be used in the agent pipeline. The
     available options are:
 
@@ -125,9 +125,9 @@ def agent_pipeline(
     `give_tools`, and `create_agent` functions with the appropriate parameters.
 
     """
-    model = create_model(provider, model_type)
+    model = create_model(provider, model_type)  # type: ignore
     system_prompt = create_prompt()
     tools = give_tools()
     agent = create_agent(model=model, tools=tools, system_prompt=system_prompt)
 
-    return agent
+    st.session_state["agent"] = agent
