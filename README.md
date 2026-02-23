@@ -35,7 +35,19 @@ If you wish to contact me for anything related to this project, feel free to rea
 </details>
 
 ## Introduction
-tbd
+***To create a world where people on an influential platform can not lie to the world.***
+
+An AI powered Lie Detector, that fact checks statements in real time!
+
+**About the Creator**
+
+* **Name:** David Rodriguez
+* **College:** Brooklyn College
+* **Year:** Senior
+* **Extracurricular Activities:**
+    * Undergraduate Student Government Senator
+    * Former CodePath Ambassador
+    * Club Treasurer
 
 ### Timeline
 Image of the projected project timeline.
@@ -47,7 +59,21 @@ Image of the projected project timeline.
 ## Features
 
 ### Built With
-- [Python](https://www.python.org/)
+The following technologies were utilized to build the Lai assistant:
+
+* **Language**
+    - [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+
+* **AI & Logic**
+    - [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
+    - [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)](https://www.langchain.com/)
+
+* **Tools & Voice**
+    - [![Tavily](https://img.shields.io/badge/Tavily-FF5733?style=for-the-badge&logo=search&logoColor=white)](https://tavily.com/)
+    - [![ElevenLabs](https://img.shields.io/badge/Eleven%20Labs-000000?style=for-the-badge&logo=elevenlabs&logoColor=white)](https://elevenlabs.io/)
+
+* **UI**
+    - [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
@@ -92,3 +118,4 @@ Heres how you can contribute:
 
 ## License
 This project is licensed under the Apache 2.0 License - see the [LICENSE](https://github.com/drod75/Lai/blob/main/LICENSE) file for details.
+
