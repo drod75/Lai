@@ -49,7 +49,7 @@ with st.expander("Audio Lie Analysis"):
         u_result = st.session_state["lai"].invoke(
             {"messages": [{"role": "user", "content": u_transcript}]}
         )
-        
+
         st.markdown("### Uploaded Audio Result")
         st.markdown(u_result["messages"][-1].content[-1]["text"])
 

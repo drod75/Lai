@@ -24,7 +24,9 @@ with c1:
 with c2:
     st.header("Recording Option")
     audio = st.audio_input("Record you're conversation!")
-    st.session_state['last_entry'] = st.session_state['elevenlabs'].speech_to_text.convert(
+    st.session_state["last_entry"] = st.session_state[
+        "elevenlabs"
+    ].speech_to_text.convert(
         file=audio,
         model_id="scribe_v2",  # Model to use
         tag_audio_events=True,  # Tag audio events like laughter, applause, etc.
@@ -34,8 +36,10 @@ with c2:
 
 with c3:
     st.header("Audio File Option")
-    audio =  st.file_uploader("Choose an audio file!", type=["wav", "mp3", "m4a"])
-    st.session_state['last_entry'] = st.session_state['elevenlabs'].speech_to_text.convert(
+    audio = st.file_uploader("Choose an audio file!", type=["wav", "mp3", "m4a"])
+    st.session_state["last_entry"] = st.session_state[
+        "elevenlabs"
+    ].speech_to_text.convert(
         file=audio,
         model_id="scribe_v2",  # Model to use
         tag_audio_events=True,  # Tag audio events like laughter, applause, etc.
@@ -43,9 +47,13 @@ with c3:
         diarize=True,  # Whether to annotate who is speaking
     )
 
-if st.session_state['last_entry']:
+if st.session_state["last_entry"]:
     with st.spinner("Awaiting response...", show_time=True):
-        temporary_response = st.session_state["lai"].invoke({"messages": [{"role": "user", "content": st.session_state['last_entry']}]})
-        st.session_state['last_response'] = temporary_response["messages"][-1].content[-1]["text"]
-    
-    st.markdown(st.session_state['last_response'])
+        temporary_response = st.session_state["lai"].invoke(
+            {"messages": [{"role": "user", "content": st.session_state["last_entry"]}]}
+        )
+        st.session_state["last_response"] = temporary_response["messages"][-1].content[
+            -1
+        ]["text"]
+
+    st.markdown(st.session_state["last_response"])
