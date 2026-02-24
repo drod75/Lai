@@ -6,7 +6,6 @@ from typing import Literal
 from src.agent.tools.tools import give_tools
 
 
-@st.cache_resource
 def create_model(
     provider: Literal["Google", "Ollama"],
     model_type: Literal[
@@ -37,7 +36,6 @@ def create_model(
         return model
 
 
-@st.cache_resource
 def create_prompt():
     system_prompt = """
     # System Prompt: LAI (Project Fact-Check)
@@ -100,7 +98,6 @@ def create_prompt():
     return system_prompt
 
 
-@st.cache_resource
 def agent_pipeline(
     provider: Literal["Google", "Ollama"],
     model_type: Literal[
@@ -130,4 +127,4 @@ def agent_pipeline(
     tools = give_tools()
     agent = create_agent(model=model, tools=tools, system_prompt=system_prompt)
 
-    st.session_state["agent"] = agent
+    return agent
