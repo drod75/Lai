@@ -26,7 +26,7 @@ def readme():
 
 pg = st.navigation(
     [
-        st.Page("src/ui/main_page.py", title="Lai", icon="🤖"),
+        st.Page("src/ui/main.py", title="Lai", icon="🤖"),
         st.Page(readme, title="ReadMe", icon=":material/book:"),
     ]
 )
