@@ -8,7 +8,9 @@ presets()
 audio = st.file_uploader("chose a file", type=["wav", "mp3", "m4a"])
 
 if audio:
-    transcription = st.session_state["elevenlabs"].speech_to_text.convert(
+    transcription = st.session_state[
+        "elevenlabs"
+    ].speech_to_text.convert(
         file=audio,
         model_id="scribe_v2",  # Model to use
         tag_audio_events=True,  # Tag audio events like laughter, applause, etc.
