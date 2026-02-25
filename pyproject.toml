@@ -1,14 +1,12 @@
 [project]
 name = "lai"
 version = "0.1.0"
-description = "Add your description here"
+description = "The AI powered Lie detector!"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "elevenlabs>=2.34.0",
     "langchain>=1.2.8",
-    "langchain-google-genai>=4.2.0",
-    "langchain-ollama>=1.0.1",
     "langchain-tavily>=0.2.17",
     "python-dotenv>=1.2.1",
     "ratelimit>=2.2.1",
@@ -18,4 +16,10 @@ dependencies = [
 [project.optional-dependencies]
 notebook = [
     "jupyterlab>=4.5.3",
+]
+gemnini = [
+	"langchain-google-genai>=4.2.0"
+]
+ollama = [
+	"langchain-ollama>=1.0.1"
 ]
