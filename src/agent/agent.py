@@ -1,39 +1,16 @@
 import streamlit as st
-from langchain_ollama import ChatOllama
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.agents import create_agent
+from langchain.chat_models import init_chat_model
 from typing import Literal
 from src.agent.tools.tools import give_tools
 
 
 def create_model(
-    provider: Literal["Google", "Ollama"],
-    model_type: Literal[
-        "llama3.2:1b", "llama3.2:3b", "gemini-3-flash", "gemini-2.5-flash"
-    ],
+    provider,
+    model
 ):
-    """The function `create_model` creates a chatbot model based on the specified provider and model type.
-
-    Parameters
-    ----------
-    provider : Literal["Google", "Ollama"]
-        The `provider` parameter specifies the provider of the chatbot model, which can be either "Google"
-    or "Ollama".
-    model_type : Literal["llama3.2:1b", "llama3.2:3b", "gemma3:4b", "gemini-3-flash", "gemini-2.5-flash"]
-        The `model_type` parameter specifies the type of model to be created. The available options are:
-
-    Returns
-    -------
-        The `create_model` function returns an instance of either `ChatGoogleGenerativeAI` or `ChatOllama`
-    based on the specified `provider` and `model_type` parameters.
-
-    """
-    if provider == "Google":
-        model = ChatGoogleGenerativeAI(model=model_type)
-        return model
-    else:
-        model = ChatOllama(model=model_type, temperature=0.4)
-        return model
+    chat_model = init_chat_model(f"{provider}:{model}", api_key=st.secrets["MODEL_API_KEY"])
+    return chat_model
 
 
 def create_prompt():
@@ -99,32 +76,12 @@ def create_prompt():
 
 
 def agent_pipeline(
-    provider: Literal["Google", "Ollama"],
-    model_type: Literal[
-        "llama3.2:1b", "llama3.2:3b", "", "gemini-3-flash", "gemini-2.5-flash"
-    ],
+    provider,
+    model
 ):
-    """The function `agent_pipeline` creates an agent with a specified provider and model type.
-
-    Parameters
-    ----------
-    provider : Literal["Google", "Ollama"]
-        The `provider` parameter specifies the provider of the agent model. It can be either "Google" or
-    "Ollama".
-    model_type : Literal["llama3.2:1b", "llama3.2:3b", "gemini-3-flash"]
-        The `model_type` parameter specifies the type of model to be used in the agent pipeline. The
-    available options are:
-
-    Returns
-    -------
-        The `agent_pipeline` function is returning an agent object that is created using the specified
-    provider and model type. The agent is created by calling the `create_model`, `create_prompt`,
-    `give_tools`, and `create_agent` functions with the appropriate parameters.
-
-    """
-    model = create_model(provider, model_type)  # type: ignore
+    chat_model = create_model(provider, model)
     system_prompt = create_prompt()
     tools = give_tools()
-    agent = create_agent(model=model, tools=tools, system_prompt=system_prompt)
+    agent = create_agent(model=chat_model, tools=tools, system_prompt=system_prompt)
 
     return agent
