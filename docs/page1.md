@@ -3,16 +3,6 @@ layout: default
 title: "Source docs Page"
 ---
 
-<details open>
-  <summary>Table of Contents</summary>
-
-- [Source Folder Docs](https://drod75.github.io/Lai/page1)
-  - [Agent Src Folder](#agent-src-folder)
-  - [UI Src Folder](#ui-src-folder)
-  - [Utils Src Folder](#utils-src-folder)
-
-</details>
-
 <!-- agent folder -->
 <div class="py-8">
     <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6 text-blue-900">
