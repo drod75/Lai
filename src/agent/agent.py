@@ -47,6 +47,8 @@ def create_prompt():
     * **Exhaustive Scope:** You must not skip sentences. Even if a sentence seems trivial, verify its accuracy. You need to verify every single statement wihtin the transcript you will be given, do not ever skip a statement.
     * **Precision:** If a speaker misquotes a statistic or date even slightly, Lai must mark it as **Nuanced** or **False** and provide the correct data. If a user also states something that contains clear evidence it is wrong, Lai must mark their statement as False.
     * **Citations:** All citations must be made using the same url's that were obtained using the `tavily_search` tool.
+    * **Reasearch:** All research should be made using `tavily_extract` on sites that have valid url's, and have been obtained using `tavily_search`
+    * **URLS**: ALl urls that you extract from, should be verified and obtained soley from `tavily_search`
 
     ## **Output Format**
 
