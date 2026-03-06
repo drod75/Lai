@@ -20,8 +20,8 @@ def get_elevenlabs_client():
 @st.cache_resource
 def get_ai_agent():
    return agent_pipeline(
-        provider="google_genai", 
-        model="gemini-2.5-flash"
+        provider=st.secrets["PROVIDER"], 
+        model=st.secrets['MODEL']
     )
 
 st.session_state["elevenlabs"] = get_elevenlabs_client()
@@ -43,18 +43,21 @@ with c1:
     text_input = st.text_input("Transcript goes here!", key="text_in")
     if text_input and text_input != st.session_state["last_entry"]:
         st.session_state["last_entry"] = text_input
+        st.session_state["last_response"] = None
 
 with c2:
     st.header("Recording Option")
     audio_record = st.audio_input("Record your conversation!")
     if audio_record:
         st.session_state["last_entry"] = speech_to_text(audio_record)
+        st.session_state["last_response"] = None
 
 with c3:
     st.header("Audio File Option")
     audio_file = st.file_uploader("Choose an audio file!", type=["wav", "mp3", "m4a"])
     if audio_file:
         st.session_state["last_entry"] = speech_to_text(audio_file)
+        st.session_state["last_response"] = None
 
 if st.session_state["last_entry"] and not st.session_state["last_response"]:
     with st.spinner("Awaiting response..."):
