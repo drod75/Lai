@@ -9,7 +9,7 @@ def create_model(
     provider,
     model
 ):
-    chat_model = init_chat_model(f"{provider}:{model}", api_key=st.secrets["MODEL_API_KEY"])
+    chat_model = init_chat_model(f"{provider}:{model}", api_key=st.secrets["MODEL_API_KEY"], temperature=0.2)
     return chat_model
 
 
