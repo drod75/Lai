@@ -1,14 +1,13 @@
 import streamlit as st
 from langchain.agents import create_agent
 from langchain.chat_models import init_chat_model
-from typing import Literal
 from src.agent.tools.tools import create_tools
 
 
 def create_model(provider: str, model: str):
-    '''The function `create_model` initializes a chat model using a specified provider and model with
+    """The function `create_model` initializes a chat model using a specified provider and model with
     specific parameters.
-    
+
     Parameters
     ----------
     provider : str
@@ -18,22 +17,24 @@ def create_model(provider: str, model: str):
         The `model` parameter in the `create_model` function refers to the specific model that will be used
     for chat generation. It is a string that represents the name or identifier of the model to be
     initialized.
-    
+
     Returns
     -------
         The function `create_model` returns a chat model initialized with the specified provider and model,
     using the provided API key and temperature setting.
-    
-    '''
-    chat_model = init_chat_model(f"{provider}:{model}", api_key=st.secrets["MODEL_API_KEY"], temperature=0.2)
+
+    """
+    chat_model = init_chat_model(
+        f"{provider}:{model}", api_key=st.secrets["MODEL_API_KEY"], temperature=0.2
+    )
     return chat_model
 
 
 def create_prompt() -> str:
-    '''The `create_prompt` function generates a detailed system prompt for the core intelligence, Lai, in a
+    """The `create_prompt` function generates a detailed system prompt for the core intelligence, Lai, in a
     fact-checking project, outlining its identity, tools, operational instructions, boundaries, output
     format, and research guidelines.
-    
+
     Returns
     -------
         The `create_prompt()` function returns a detailed system prompt for the LAI (Project Fact-Check)
@@ -41,8 +42,8 @@ def create_prompt() -> str:
     available for use, operational instructions divided into phases, boundaries and constraints to
     follow, output format requirements, and the importance of citations in the response. The prompt
     provides a structured guide for fact-checking
-    
-    '''
+
+    """
     system_prompt = """
     # System Prompt: LAI (Project Fact-Check)
 
@@ -115,9 +116,9 @@ def create_prompt() -> str:
 
 
 def agent_pipeline(provider: str, model: str):
-    '''The function `agent_pipeline` creates an agent with a specified provider and model for chat
+    """The function `agent_pipeline` creates an agent with a specified provider and model for chat
     interactions.
-    
+
     Parameters
     ----------
     provider : str
@@ -128,12 +129,12 @@ def agent_pipeline(provider: str, model: str):
         The `model` parameter in the `agent_pipeline` function refers to the specific model that will be
     used by the agent for its chat functionality. This model could be a machine learning model, a
     rule-based model, or any other type of model that the agent will utilize to interact with users.
-    
+
     Returns
     -------
         An agent object is being returned from the agent_pipeline function.
-    
-    '''
+
+    """
     chat_model = create_model(provider, model)
     system_prompt = create_prompt()
     tools = create_tools()

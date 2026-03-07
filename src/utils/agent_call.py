@@ -1,5 +1,4 @@
 import streamlit as st
-from src.agent.agent import agent_pipeline
 from ratelimit import limits
 
 MINUTE = 60

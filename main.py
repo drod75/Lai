@@ -24,12 +24,13 @@ def readme():
     st.set_page_config(page_title="README Page", layout="wide")
     st.markdown(readme_content, unsafe_allow_html=True)
 
+
 # streamlit page navifation bar, set to top
 pg = st.navigation(
     [
         st.Page("src/ui/main.py", title="Lai", icon="🤖"),
-        st.Page(readme, title="ReadMe", icon=":material/book:")
+        st.Page(readme, title="ReadMe", icon=":material/book:"),
     ],
-    position ="top"
+    position="top",
 )
 pg.run()
