@@ -30,18 +30,16 @@ def check_url(url: str) -> bool:
         return False 
 
 
-def create_tavily_tools():
-    """The function `create_tavily_tools` returns a list of TavilySearch and TavilyExtract objects with
-    specific configurations.
-
+def create_tools():
+    '''The function `create_tools` returns a list of tools for searching, extracting information, and
+    checking URLs.
+    
     Returns
     -------
-        The function `create_tavily_tools()` is returning a list of Tavily tools. The list contains two
-    instances: one of `TavilySearch` with specified parameters and one of `TavilyExtract` with specified
-    parameters.
-
-    """
-
+        The `create_tools` function returns a list of tools, including `TavilySearch` with specified
+    parameters, `TavilyExtract` with specified parameters, and `check_url`.
+    
+    '''
     return [
         TavilySearch(
             max_results=5,
@@ -61,9 +59,3 @@ def create_tavily_tools():
         ),
         check_url
     ]
-
-
-def give_tools():
-    tavily_tools = create_tavily_tools()
-
-    return tavily_tools
