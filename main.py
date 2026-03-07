@@ -1,6 +1,6 @@
 import streamlit as st
 
-
+# page configuration for users
 st.set_page_config(
     page_title="Lai",
     page_icon="🤖",
@@ -9,6 +9,7 @@ st.set_page_config(
 )
 
 
+# readme page function
 def readme():
     def read_markdown_file(file_path):
         try:
@@ -23,7 +24,7 @@ def readme():
     st.set_page_config(page_title="README Page", layout="wide")
     st.markdown(readme_content, unsafe_allow_html=True)
 
-
+# streamlit page navifation bar, set to top
 pg = st.navigation(
     [
         st.Page("src/ui/main.py", title="Lai", icon="🤖"),
