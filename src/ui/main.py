@@ -1,5 +1,4 @@
 import streamlit as st
-import os
 from dotenv import load_dotenv
 from elevenlabs.client import ElevenLabs
 from src.utils.stt import speech_to_text
@@ -13,16 +12,16 @@ if "last_response" not in st.session_state:
 
 load_dotenv()
 
+
 @st.cache_resource
 def get_elevenlabs_client():
     return ElevenLabs(api_key=st.secrets["ELEVENLABS_API_KEY"])
 
+
 @st.cache_resource
 def get_ai_agent():
-   return agent_pipeline(
-        provider=st.secrets["PROVIDER"], 
-        model=st.secrets['MODEL']
-    )
+    return agent_pipeline(provider=st.secrets["PROVIDER"], model=st.secrets["MODEL"])
+
 
 st.session_state["elevenlabs"] = get_elevenlabs_client()
 st.session_state["agent"] = get_ai_agent()
