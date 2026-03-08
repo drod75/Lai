@@ -2,8 +2,7 @@ title: Utils Src Folder
 items:
   - title: Speech to Text
     description: The speech to text utility, location being `src/utils/stt.py`, contains the ElevenLabs api, which is used to transcribe audio files, the object that is returned is a `Speech to Text Chunk Response Model``, from this the text attribute is returned, since all other attributes do not need to be considered for now
-  - title: Code Block
-    lines: |
+    code: |
       import streamlit as st
 
       def speech_to_text(audio):

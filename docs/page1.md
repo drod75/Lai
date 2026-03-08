@@ -67,9 +67,9 @@ title: "Source docs Page"
                 <p class="text-gray-700 mt-2">{{ item.description }}</p>
 
                 <!-- code block if -->
-                {% if item.title == "Code Block"% and item.lines %}
+                {% if item.code %}
                     <div class="mockup-code w-full">
-                        <pre data-prefix="$"><code>{{ lines }}</code></pre>
+                        <pre data-prefix="$"><code>{{ item.code }}</code></pre>
                     </div>
                 {% endif %}
             </div>
