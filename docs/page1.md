@@ -65,13 +65,6 @@ title: "Source docs Page"
             <div class="p-5 bg-white rounded-lg shadow-sm border-l-4 border-purple-600">
                 <h3 class="text-2xl font-bold text-purple-900">{{ item.title }}</h3>
                 <p class="text-gray-700 mt-2">{{ item.description }}</p>
-
-                <!-- code block if -->
-                {% if item.code %}
-                    <div class="mockup-code w-full">
-                        <pre data-prefix="$"><code>{{ item.code }}</code></pre>
-                    </div>
-                {% endif %}
             </div>
         {% endfor %}
     </div>
