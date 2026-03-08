@@ -69,9 +69,7 @@ title: "Source docs Page"
                 <!-- code block if -->
                 {% if item.title == "Code Block"% and item.lines %}
                     <div class="mockup-code w-full">
-                        {% for line in item.lines %}
-                            <pre data-prefix="{{ forloop.index }}"><code>{{ line }}</code></pre>
-                        {% endfor %}
+                        <pre data-prefix="$"><code>{{ lines }}</code></pre>
                     </div>
                 {% endif %}
             </div>
