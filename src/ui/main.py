@@ -1,6 +1,7 @@
 import streamlit as st
 from dotenv import load_dotenv
 from elevenlabs.client import ElevenLabs
+from pypdf import PdfReader
 from src.utils.stt import speech_to_text
 from src.agent.agent import agent_pipeline
 from src.utils.agent_call import call
@@ -35,7 +36,7 @@ st.markdown(
 )
 
 
-c1, c2, c3 = st.columns(3, border=True)
+c1, c2, c3, c4 = st.columns(4, border=True)
 
 with c1:
     st.header("Text Option")
@@ -57,6 +58,20 @@ with c3:
     if audio_file:
         st.session_state["last_entry"] = speech_to_text(audio_file)
         st.session_state["last_response"] = None
+
+with c4:
+    st.header("PDF File Option")
+    pdf_file = st.file_uploader("Choose a PDF file!", type=["pdf"])
+    if pdf_file:
+        reader = PdfReader(pdf_file)
+        full_text = ""
+        for page in reader.pages:
+            full_text += page.extract_text() + " "
+            full_text = full_text.strip()
+            
+        if full_text:
+            st.session_state["last_entry"] = full_text
+            st.session_state["last_response"] = None
 
 if st.session_state["last_entry"] and not st.session_state["last_response"]:
     with st.spinner("Awaiting response..."):
