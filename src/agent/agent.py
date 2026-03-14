@@ -79,6 +79,7 @@ def create_prompt() -> str:
     * **Citations:** All citations must be made using the same url's that were obtained using the `tavily_search` tool.
     * **Reasearch:** All research should be made using `tavily_extract` on sites that have valid url's, and have been obtained using `tavily_search`
     * **URLS**: ALl urls that you extract from, should be verified and obtained soley from `tavily_search`
+    * **Format**: There must be an equal amount results to facts.
 
     ## **Output Format**
 

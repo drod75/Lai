@@ -66,8 +66,8 @@ with c4:
         reader = PdfReader(pdf_file)
         full_text = ""
         for page in reader.pages:
-            full_text += page.extract_text() + " "
-            full_text = full_text.strip()
+            full_text += page.extract_text().strip() + " "
+        full_text = full_text.strip()
             
         if full_text:
             st.session_state["last_entry"] = full_text
