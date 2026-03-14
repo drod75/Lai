@@ -8,6 +8,7 @@ dependencies = [
     "elevenlabs>=2.34.0",
     "langchain>=1.2.8",
     "langchain-tavily>=0.2.17",
+    "pypdf>=6.8.0",
     "python-dotenv>=1.2.1",
     "ratelimit>=2.2.1",
     "streamlit>=1.54.0",
