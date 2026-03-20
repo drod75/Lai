@@ -3,8 +3,6 @@ layout: documentation
 title: "Source docs Page"
 ---
 
-<br>
-
 This is the **Source Code Documentation** main page, you can find the table on contents above, which links the sub pages for each component of the source code. Each sub page contains detailed documentation and explanations of the respective component, along with code snippets and examples to help you understand how to use and implement it in your projects. 
 
 Each sub page is organized to tackle each file in the respective folder, and each file in sequential order based on the file name, each file will be explained in terms of how it works and why. The only file's left out will be the `__init__.py` files, since they are just used to make the folder a package, and they don't contain any code that needs to be explained. Any files that do not appear in the github such as `.streamlit/` in the main folder, will be briefly explain where it needs to be.
@@ -15,11 +13,11 @@ If any information is inaccurate to the code, or out of date, then it will most 
 
 <br>
 
-<ul class="list bg-fuchsia-100 rounded-box shadow-md">
+<ul class="list rounded-box shadow-md">
   
-  <li class="p-4 pb-2 opacity-60 tracking-wide">Source Code Folder Pages</li>
+  <li class="rounded-box bg-fuchsia-300 p-4 pb-2 opacity-60 tracking-wide">Source Code Folder Pages</li>
   
-  <li class="list-row">
+  <li class="bg-fuchsia-100 list-row">
     <div>
       <div>Agent</div>
       <div class="uppercase font-semibold opacity-60">The Agent Source Code...</div>
@@ -29,7 +27,7 @@ If any information is inaccurate to the code, or out of date, then it will most 
     </p>
   </li>
   
-  <li class="list-row">
+  <li class="bg-fuchsia-100 list-row">
     <div>
       <div>Agent</div>
       <div class="uppercase font-semibold opacity-60">The UI Source Code...</div>
@@ -39,7 +37,7 @@ If any information is inaccurate to the code, or out of date, then it will most 
     </p>
   </li>
   
-  <li class="list-row">
+  <li class="bg-fuchsia-100 list-row">
     <div>
       <div>Agent</div>
       <div class="uppercase font-semibold opacity-60">The Utils Source Code...</div>
@@ -49,7 +47,5 @@ If any information is inaccurate to the code, or out of date, then it will most 
     </p>
   </li>
 </ul>
-
-<br>
 
 Click on the respective section in the Table of Contents at the top of the page, to see a detailed documentation of the respective component of the source code, and if you have any questions or suggestions, feel free to reach out to me through my contact info in the footer.
