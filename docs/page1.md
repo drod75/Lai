@@ -5,9 +5,10 @@ title: "Source docs Page"
 
 This is the **Source Code Documentation** main page, you can find the table on contents above, which links the sub pages for each component of the source code. Each sub page contains detailed documentation and explanations of the respective component, along with code snippets and examples to help you understand how to use and implement it in your projects. 
 
-<p class="text-center">The Source Code Documentation page is split up into three parts:</p>
+<br>
 
->
+<p class="text-2xl italic font-bold text-center">The Source Code Documentation page is split up into three parts:</p>
+
 <ul class="list bg-pink-100 rounded-box shadow-md">
   
   <li class="p-4 pb-2 opacity-60 tracking-wide">Source Code Folder Pages</li>
@@ -43,4 +44,6 @@ This is the **Source Code Documentation** main page, you can find the table on c
   </li>
 </ul>
 
-Click on the respective section in the table on contents to see a detailed documentation of the respective component of the source code, and if you have any questions or suggestions, feel free to reach out to me through my contact info in the footer.
+<br>
+
+Click on the respective section in the Table of Contents at the top of the page, to see a detailed documentation of the respective component of the source code, and if you have any questions or suggestions, feel free to reach out to me through my contact info in the footer.
