@@ -2,23 +2,26 @@
 layout: default
 ---
 
-<div class="grid place-items-center h-screen">
-    <div class="w-full bg-gray-100 px-4 py-3 text-left text-gray-800 break-words max-w-md rounded">
-        <div class="mx-auto text-xl font-semibold"><strong>Table of content</strong></div>
-        <ul class="mt-2 list-disc px-2 pl-6">
+<div class="flex items-center justify-center min-h-[50vh] p-4">
+    <div class="w-full bg-gray-100 px-8 py-10 text-left text-gray-800 break-words max-w-4xl rounded-lg shadow-sm">
+        <div class="text-3xl font-bold mb-6"><strong>Table of Contents</strong></div>
+        <ul class="space-y-2 list-disc pl-8">
             <li>
-                <a class="block hover:bg-gray-200 px-2 py-1 rounded" href="/Lai/code_docs/page1"">Agent Code</a>
+                <a class="block hover:bg-gray-200 px-4 py-3 rounded-md text-lg transition-colors"
+                    href="/Lai/code_docs/page1">Agent Code</a>
             </li>
             <li>
-                <a class=" block hover:bg-gray-200 px-2 py-1 rounded" href="/Lai/code_docs/page2"">UI Code</a>
+                <a class="block hover:bg-gray-200 px-4 py-3 rounded-md text-lg transition-colors"
+                    href="/Lai/code_docs/page2">UI Code</a>
             </li>
             <li>
-                <a class=" block hover:bg-gray-200 px-2 py-1 rounded" href="/Lai/code_docs/page3"">Utils Code</a>
+                <a class="block hover:bg-gray-200 px-4 py-3 rounded-md text-lg transition-colors"
+                    href="/Lai/code_docs/page3">Utils Code</a>
             </li>
         </ul>
     </div>
 </div>
 
-<div class=" main-content">
-                    {{content}}
-    </div>
+<div class="text-lg main-content">
+    {{content}}
+</div>
