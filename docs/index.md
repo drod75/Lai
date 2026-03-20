@@ -31,7 +31,7 @@ layout: default
         
         <div class="grid grid-cols-1 gap-6">
             {% for item in site.data.home.sections.items %}
-                <div class="p-5 bg-white rounded-lg shadow-sm border-l-4 border-blue-600">
+                <div class="p-5 bg-sky-100 rounded-lg shadow-sm border-l-4 border-blue-600">
                     <h3 class="text-2xl font-bold text-blue-900">{{ item.title }}</h3>
                     <p class="text-gray-700 mt-2">{{ item.description }}</p>
 
@@ -52,7 +52,7 @@ layout: default
                     {% endif %}
                 </div>
             {% endfor %}
-                <div class="p-5 bg-white rounded-lg shadow-sm border-l-4 border-blue-600">
+                <div class="p-5 bg-sky-100 rounded-lg shadow-sm border-l-4 border-blue-600">
                     <h3 class="text-2xl font-bold text-blue-900">{{ site.data.home.timeline.title }}</h3>
                     <p class="text-gray-700 mt-2">{{ site.data.home.timeline.description }}</p>
                     <div class="mt-6">
@@ -71,7 +71,7 @@ layout: default
         
         <div class="grid grid-cols-1 gap-6">
             {% for item in site.data.home.pages.items %}
-                <div class="p-5 bg-white rounded-lg shadow-sm border-l-4 border-fuchsia-600">
+                <div class="p-5 bg-fuchsia-100 rounded-lg shadow-sm border-l-4 border-fuchsia-600">
                     <h3 class="text-2xl font-bold text-fuchsia-900">{{ item.title }}</h3>
                     <p class="text-gray-700 mt-2">{{ item.description }}</p>
                 </div>

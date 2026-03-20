@@ -7,9 +7,7 @@ This is the **Source Code Documentation** main page, you can find the table on c
 
 <br>
 
-<p class="text-2xl italic font-bold text-center">The Source Code Documentation page is split up into three parts:</p>
-
-<ul class="list bg-pink-100 rounded-box shadow-md">
+<ul class="list bg-fuchsia-100 rounded-box shadow-md">
   
   <li class="p-4 pb-2 opacity-60 tracking-wide">Source Code Folder Pages</li>
   
