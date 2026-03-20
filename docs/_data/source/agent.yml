@@ -1,4 +1,0 @@
-title: Agent Src Folder
-items:
- - title: Introduction
-   description: The `src/agent` folder contains all the code for the agent side code of Lai, such as the model creation, tools, and prompt.
