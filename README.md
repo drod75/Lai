@@ -26,10 +26,6 @@ If you wish to contact me for anything related to this project, feel free to rea
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
-  - [Demo](#demo)
-    - [Demonstration Videos](#demonstration-videos)
-      - [Demo 1: TBD](#demo-1-tbd)
-      - [Demo 2: TBD](#demo-2-tbd)
   - [Contributing](#contributing)
   - [License](#license)
 </details>
@@ -78,29 +74,32 @@ The following technologies were utilized to build the Lai assistant:
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
 ## Getting Started
-tbd
+To get a local copy of the project up and running, follow the instructions below.
 
 ### Prerequisites
-tbd
+
+- Have Python installed on your machine (version 3.8 or higher).
+    ```
+- Obtain API keys for the following services:
+  - Google Gemini
+  - Tavily
+  - ElevenLabs
 
 ### Setup
-tbd
 
-## Demo
-In order to demonstrate the capabilities of Lai, various debates and usage example were/will be recorded and can be found in the repository under the `docs/assets/demo/` folder.
-
-### Demonstration Videos
-Each of the following demonstration videos will show not only the current capability of the AI tool, but also show people's live reaction and thoughts of the process, and the results.
-
-#### Demo 1: TBD
-tbd
-
-Video Link: [TBD]()
-
-#### Demo 2: TBD
-tbd
-
-Video Link: [TBD]()
+- Install the required dependencies using either Pip or UV(Recommended).
+  - Using Pip:
+    ```bash
+    pip install -r requirements.txt
+    ```
+  - Using UV:
+    ```bash
+    uv venv
+    uv sync
+- Run the application:
+    ```bash
+    streamlit run main.py
+    ```
 
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
