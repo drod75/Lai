@@ -3,7 +3,7 @@ layout: documentation
 title: "Agent Page"
 ---
 
-This is the Agent Source CodesSub page, the main structure of the agent folder is as follows:
+This is the Agent Source Code Sub page, the main structure of the agent folder is as follows:
 
 <br>
 
@@ -78,7 +78,7 @@ Within our Agent Code we have two main pieces, our `agent.py` file which contain
 <br>
 
 <div class="p-4 border-l-8 border-sky-600 bg-sky-100 rounded-lg shadow-lg">
-    <div class="text-3xl font-bold uppercase text-blue-900 mb-6">
+    <div class="text-3xl font-bold uppercase text-sky-900 mb-6">
         Tools Folder
     </div>
 </div>
@@ -89,12 +89,10 @@ The tools folder contains only one two files, one being the standard `__init__.p
 
 <br>
 
-
 ```python
 from langchain_tavily import TavilySearch, TavilyExtract
 from langchain.tools import tool
 import requests
-
 
 @tool
 def check_url(url: str) -> bool:
@@ -161,8 +159,8 @@ Our `check_url` tool checks a URL and returns a boolean value based on if it exi
 
 <br>
 
-<div class="p-4 border-l-8 border-sky-600 bg-sky-100 rounded-lg shadow-lg">
-    <div class="text-3xl font-bold uppercase text-blue-900 mb-6">
+<div class="p-4 border-l-8 border-fuchsia-600 bg-fuchsia-100 rounded-lg shadow-lg">
+    <div class="text-3xl font-bold uppercase text-fuchsia-900 mb-6">
         Agent.py
     </div>
 </div>
@@ -287,7 +285,7 @@ def create_prompt() -> str:
 
     Remember, the "MLA" citation is a crucial piece of evidence for the debaters using **Lai**. If Lai cannot find a specific author for a source, it should start the citation with the **"Article Title"** instead. Every link should be valid, and not lead to an empty site, or a site that does not exist.
 
-     """
+    """
 
     return system_prompt
 
@@ -318,7 +316,6 @@ def agent_pipeline(provider: str, model: str):
     agent = create_agent(model=chat_model, tools=tools, system_prompt=system_prompt)
 
     return agent
-
 ```
 
 <br>
