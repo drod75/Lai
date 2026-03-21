@@ -5,61 +5,52 @@ title: "Agent Page"
 
 This is the Agent Source CodesSub page, the main structure of the agent folder is as follows:
 
+<br>
+
 <!-- Tree Structure found at https://preline.co/docs/tree-view.html -->
 <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
   <div class="hs-accordion-treeview-root" role="tree" aria-orientation="vertical">
     <div class="hs-accordion-group" role="group" data-hs-accordion-always-open>
-      
       <div class="hs-accordion active" role="treeitem" aria-expanded="true" id="agent-root">
         <div class="hs-accordion-heading py-0.5 flex items-center gap-x-0.5 w-full">
           <button class="hs-accordion-toggle size-6 flex justify-center items-center hover:bg-gray-200 rounded-md focus:outline-hidden" aria-expanded="true" aria-controls="agent-root-collapse">
             <svg class="size-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"/>
-            </svg>
+              <path d="M5 12h14"/></svg>
           </button>
-
           <div class="grow hs-accordion-selectable px-1.5 rounded-md cursor-pointer">
             <div class="flex items-center gap-x-3">
               <svg class="shrink-0 size-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>
-              </svg>
+                <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
               <div class="grow">
                 <span class="text-sm font-medium text-gray-800">agent</span>
               </div>
             </div>
           </div>
         </div>
-
         <div id="agent-root-collapse" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="group">
           <div class="hs-accordion-group ps-7 relative before:absolute before:top-0 before:start-3 before:-ms-px before:h-full before:border-s before:border-gray-300" role="group" data-hs-accordion-always-open>
-
             <div class="hs-accordion active" role="treeitem" aria-expanded="true" id="tools-folder">
               <div class="hs-accordion-heading py-0.5 flex items-center gap-x-0.5 w-full">
                 <button class="hs-accordion-toggle size-6 flex justify-center items-center hover:bg-gray-200 rounded-md" aria-expanded="true" aria-controls="tools-folder-collapse">
                   <svg class="size-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"/>
-                  </svg>
+                    <path d="M5 12h14"/> </svg>
                 </button>
-
                 <div class="grow hs-accordion-selectable px-1.5 rounded-md cursor-pointer">
                   <div class="flex items-center gap-x-3">
                     <svg class="shrink-0 size-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>
-                    </svg>
+                      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
                     <div class="grow">
                       <span class="text-sm font-medium text-gray-800">tools</span>
                     </div>
                   </div>
                 </div>
               </div>
-
               <div id="tools-folder-collapse" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="group">
                 <div class="ms-3 ps-3 relative before:absolute before:top-0 before:start-0 before:-ms-px before:h-full before:border-s before:border-gray-300">
                   <div class="hs-accordion-selectable px-2 py-1 rounded-md cursor-pointer" role="treeitem">
                     <div class="flex items-center gap-x-3">
                       <svg class="shrink-0 size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
-                      </svg>
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>
                       <span class="text-sm text-gray-700">tools.py</span>
                     </div>
                   </div>
@@ -69,25 +60,35 @@ This is the Agent Source CodesSub page, the main structure of the agent folder i
             <div class="hs-accordion-selectable px-2 py-1 rounded-md cursor-pointer" role="treeitem">
               <div class="flex items-center gap-x-3">
                 <svg class="shrink-0 size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/>
-                </svg>
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>
                 <span class="text-sm text-gray-700">agent.py</span>
               </div>
             </div>
-
           </div>
         </div>
         </div>
       </div>
-
   </div>
 </div>
 
+<br>
+
 Within our Agent Code we have two main pieces, our `agent.py` file which contains the code that builds the agent, and the `/tools/` folder which contains the code the tools our agent uses. Within `/tools/` we have `tools.py` which creates out `check_url` tool, and our `create_tools` function which creates the tools list for our agent. Below will be each section that explains the code, in order of folder structure and file name, starting with `/tools/` and then `agent.py`.
 
-## Tools Folder
+<br>
+
+<div class="p-4 border-l-8 border-sky-600 bg-sky-100 rounded-lg shadow-lg">
+    <div class="text-3xl font-bold uppercase text-blue-900 mb-6">
+        Tools Folder
+    </div>
+</div>
+
+<br>
 
 The tools folder contains only one two files, one being the standard `__init__.py` file, and the other being `tools.py` which contains the code for our tools, in this case we only have one tool which is the `check_url` tool, and the function that creates the tools list for our agent which is `create_tools()`. The code for `tools.py` is as follows:
+
+<br>
+
 
 ```python
 from langchain_tavily import TavilySearch, TavilyExtract
@@ -154,11 +155,23 @@ def create_tools():
 
 ```
 
+<br>
+
 Our `check_url` tool checks a URL and returns a boolean value based on if it exists or not, we use a request head and if the status code is between 200 and 399 then we return true, if there is an exception such as a timeout or invalid url, then we return false. The `create_tools` function creates a list of tools for our agent, in this case it creates a `TavilySearch` tool with specific parameters, a `TavilyExtract` tool with specific parameters, and our custom `check_url` tool. This list is returned and used in our `agent.py` file to create the agent with these tools.
 
-## Agent.py
+<br>
+
+<div class="p-4 border-l-8 border-sky-600 bg-sky-100 rounded-lg shadow-lg">
+    <div class="text-3xl font-bold uppercase text-blue-900 mb-6">
+        Agent.py
+    </div>
+</div>
+
+<br>
 
 The `agent.py` file contains the code that creates our agent, it contains the functions, `create_model` which makes our chat model, `create_prompt` which creates the prompt for the agent, and finally `agent_pipeline` which creates the agent pipeline using the previous two functions and the tools created in `tools.py`. The code for `agent.py` is as follows:
+
+<br>
 
 ```python
 import streamlit as st
@@ -223,10 +236,10 @@ def create_prompt() -> str:
 
     ## **Operational Instructions**
 
-    1. **Phase 1: Comprehensive Transcript Analysis:** Read the provided text transcript. You must fact-check **every single sentence** within the transcript. Do not filter for "important" facts; treat every statement as a claim requiring verification. Extract the **exact quotes** for every sentence.
-    2. **Phase 2: Research:** Use `tavily_search` to find evidence for each sentence. Prioritize trusted sources: `.gov`, `.edu`, primary legal documents, peer-reviewed journals, and non-partisan news organizations.
-    3. **Phase 3: Deep Verification:** Use `tavily_extract` on the most relevant URLs to gather specific data, context, and publication details for citations. Make sure to verify the url is real and responsive using `check_url`.
-    4. **Phase 4: Synthesis:** Compare each sentence to the evidence.
+    4. **Phase 1: Comprehensive Transcript Analysis:** Read the provided text transcript. You must fact-check **every single sentence** within the transcript. Do not filter for "important" facts; treat every statement as a claim requiring verification. Extract the **exact quotes** for every sentence.
+    5. **Phase 2: Research:** Use `tavily_search` to find evidence for each sentence. Prioritize trusted sources: `.gov`, `.edu`, primary legal documents, peer-reviewed journals, and non-partisan news organizations.
+    6. **Phase 3: Deep Verification:** Use `tavily_extract` on the most relevant URLs to gather specific data, context, and publication details for citations. Make sure to verify the url is real and responsive using `check_url`.
+    7. **Phase 4: Synthesis:** Compare each sentence to the evidence.
     * **True:** The sentence is fully supported by credible evidence.
     * **False:** The sentence is contradicted by credible evidence.
     * **Nuanced:** The sentence is partially true but lacks context or is presented in a misleading way.
@@ -307,5 +320,7 @@ def agent_pipeline(provider: str, model: str):
     return agent
 
 ```
+
+<br>
 
 Our `create_model` function initializes a chat model using the specified provider and model, along with an API key and temperature setting. The `create_prompt` function generates a detailed system prompt for our agent, Lai, outlining its identity, tools, operational instructions, boundaries, output format, and research guidelines. Finally, the `agent_pipeline` function creates an agent using the chat model, tools, and system prompt created by the previous functions. This agent can then be used to perform fact-checking tasks as outlined in the system prompt.
