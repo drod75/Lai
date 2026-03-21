@@ -4,11 +4,17 @@ title: "Source docs Page"
 ---
 
 This is the **Source Code Documentation** main page, you can find the table on contents above, which links the sub pages for each component of the source code. Each sub page contains detailed documentation and explanations of the respective component, along with code snippets and examples to help you understand how to use and implement it in your projects. 
+
 <br>
+
 Each **Sub Page** is organized to tackle each file in the respective folder, and each file in sequential order based on the file name, each file will be explained in terms of how it works and why. The only file's left out will be the `__init__.py` files, since they are just used to make the folder a package, and they don't contain any code that needs to be explained. Any files that do not appear in the github such as `.streamlit/` in the main folder, will be briefly explain where it needs to be.
+
 <br>
+
 When code in one file is heavily dependent on another, a reference to that page and section will be used to make life easier on the reader.
+
 <br>
+
 **If any information is inaccurate** to the code, or out of date, then it will most likely be updated at a later time, if a good amount of time has passed, then set a Github Issue, or last case scenario message me via email of LinkedIn.
 
 <br>
