@@ -48,4 +48,6 @@ If any information is inaccurate to the code, or out of date, then it will most 
   </li>
 </ul>
 
+<br>
+
 Click on the respective section in the Table of Contents at the top of the page, to see a detailed documentation of the respective component of the source code, and if you have any questions or suggestions, feel free to reach out to me through my contact info in the footer.
