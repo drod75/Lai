@@ -7,7 +7,7 @@ layout: default
 </div>
 
 <div class="p-4 border-l-8 border-sky-600 bg-sky-100 rounded-lg shadow-lg">
-    <div class="text-3xl font-bold uppercase text-blue-900 mb-6">
+    <div class="text-3xl font-bold uppercase text-sky-900 mb-6">
         Documentation Hub
     </div>
     <ul class="flex flex-wrap gap-x-8 gap-y-2 list-none p-0 m-0">
@@ -33,7 +33,7 @@ layout: default
 <div class="text-lg max-w-7xl mx-auto">
     <br>
 
-    {{content | markdownify}}
+    {{content | markdownify | smartify }}
 
     <br>
 </div>
