@@ -1,7 +1,7 @@
 import streamlit as st
 from dotenv import load_dotenv
 from src.utils.stt import speech_to_text
-from src.utils.pdf import extract_text
+from src.utils.text_utilities import optimizer, extract_text
 from src.utils.agent_call import call
 from src.utils.caches import get_ai_agent, get_elevenlabs_client
 
@@ -30,7 +30,7 @@ with st.expander(":blue[Audio Input]", icon=":material/speaker:"):
         st.header("Recording Option")
         audio_record = st.audio_input("Record your conversation here!")
         if audio_record:
-            st.session_state["last_entry"] = speech_to_text(audio_record)
+            st.session_state["last_entry"] = optimizer(speech_to_text(audio_record))
             st.session_state["last_response"] = None
 
     with c2:
@@ -39,17 +39,17 @@ with st.expander(":blue[Audio Input]", icon=":material/speaker:"):
             "Choose an audio file to input!", type=["wav", "mp3", "m4a"]
         )
         if audio_file:
-            st.session_state["last_entry"] = speech_to_text(audio_file)
+            st.session_state["last_entry"] = optimizer(speech_to_text(audio_file))
             st.session_state["last_response"] = None
 
 with st.expander(":blue[File Input]", icon=":material/upload_file:"):
     c1, c2 = st.columns(2, border=True)
-
+    
     with c1:
         st.header("PDF File Option")
         pdf = st.file_uploader("Choose a PDF to input!", type=["pdf"])
         if pdf:
-            st.session_state["last_entry"] = extract_text(pdf)
+            st.session_state["last_entry"] = optimizer(extract_text(pdf))
             st.session_state["last_response"] = None
 
     with c2:
@@ -59,7 +59,7 @@ with st.expander(":blue[File Input]", icon=":material/upload_file:"):
         )
         if text_file:
             dedoded_file = text_file.getvalue().decode("utf-8")  # type: ignore
-            st.session_state["last_entry"] = dedoded_file
+            st.session_state["last_entry"] = optimizer(dedoded_file)
             st.session_state["last_response"] = None
 
 
@@ -67,7 +67,7 @@ with st.expander(":blue[Raw Input]", icon=":material/text_fields:"):
     st.header("Text Option")
     text_input = st.text_input("Transcript goes here!", key="text_in")
     if text_input and text_input != st.session_state["last_entry"]:
-        st.session_state["last_entry"] = text_input
+        st.session_state["last_entry"] = optimizer(text_input)
         st.session_state["last_response"] = None
 
 
