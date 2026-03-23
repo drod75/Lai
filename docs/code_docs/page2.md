@@ -116,7 +116,7 @@ with st.container(border=True):
 
 <br>
 
-Tbd...
+The code below sets up not only some important session state variables, but also our site's main header and tagline, these processes are important to be cached at the start of the site, as they are not only used throughout the site, but also need to be set up before any user interaction, as they are used in the main body of the site.
 
 <br>
 
@@ -137,6 +137,75 @@ st.markdown(
     ":violet[*__To create a world where people on an influential platform can not lie to the world__*]",
     text_alignment="center",
 )
+```
+
+<br>
+
+<br>
+
+<div class="sub-header">
+    <div class="sub-header-block">
+    </div>
+</div>
+
+<br>
+
+The
+
+<br>
+
+```python
+```
+
+<br>
+
+<div class="sub-header">
+    <div class="sub-header-block">
+        File Input
+    </div>
+</div>
+
+<br>
+
+The
+
+<br>
+
+```python
+```
+
+<br>
+
+<div class="sub-header">
+    <div class="sub-header-block">
+        Raw Input
+    </div>
+</div>
+
+<br>
+
+The
+
+<br>
+
+```python
+```
+
+<br>
+
+<div class="sub-header">
+    <div class="sub-header-block">
+        Agent Calling and Response
+    </div>
+</div>
+
+<br>
+
+The
+
+<br>
+
+```python
 ```
 
 <br>

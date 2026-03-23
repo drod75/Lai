@@ -11,9 +11,6 @@ if "last_entry" not in st.session_state:
 if "last_response" not in st.session_state:
     st.session_state["last_response"] = None
 
-load_dotenv()
-
-
 st.session_state["elevenlabs"] = get_elevenlabs_client()
 st.session_state["agent"] = get_ai_agent()
 
