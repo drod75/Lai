@@ -8,13 +8,39 @@
   <meta name="description" content>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+  <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+
+  <!-- tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+  <style type="text/tailwindcss">
+    @layer components {
+          .header-fuchsia {
+              @apply text-3xl font-bold uppercase text-fuchsia-900 mb-6;
+          }
+          .header-sky {
+              @apply text-3xl font-bold uppercase text-sky-900 mb-6;
+          }
+          .header-violet {
+              @apply text-3xl font-bold uppercase text-violet-900 mb-6;
+          }
+          .header-fuchsia-block {
+              @apply p-4 border-l-8 border-fuchsia-600 bg-fuchsia-100 rounded-lg shadow-lg;
+          }
+          .header-sky-block {
+              @apply p-4 border-l-8 border-sky-600 bg-sky-100 rounded-lg shadow-lg;
+          }
+          .header-violet-block {
+              @apply p-4 border-l-8 border-violet-600 bg-violet-100 rounded-lg shadow-lg;
+          }
+      }
+  </style>
 </head>
 
 <body class="bg-white">

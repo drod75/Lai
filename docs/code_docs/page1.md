@@ -77,8 +77,8 @@ Within our Agent Code we have two main pieces, our `agent.py` file which contain
 
 <br>
 
-<div class="p-4 border-l-8 border-sky-600 bg-sky-100 rounded-lg shadow-lg">
-    <div class="text-3xl font-bold uppercase text-sky-900 mb-6">
+<div class="header-sky-block">
+    <div class="header-sky">
         Tools Folder
     </div>
 </div>
@@ -159,8 +159,8 @@ Our `check_url` tool checks a URL and returns a boolean value based on if it exi
 
 <br>
 
-<div class="p-4 border-l-8 border-fuchsia-600 bg-fuchsia-100 rounded-lg shadow-lg">
-    <div class="text-3xl font-bold uppercase text-fuchsia-900 mb-6">
+<div class="header-fuchsia-block">
+    <div class="header-fuchsia">
         Agent.py
     </div>
 </div>
