@@ -141,20 +141,38 @@ st.markdown(
 
 <br>
 
-<br>
-
 <div class="sub-header">
     <div class="sub-header-block">
+    Audio Input
     </div>
 </div>
 
 <br>
 
-The
+The Audio input option contains our `st.expander()` block, which house's both our audio input options, and allows them to be collapsed to make the screen less cluttered. Using `st.columns()` we are able to place our inputs side by side, and we reuse this UI look later on. The first audio option, **_"Recording Option"_**, allows the user to record audio directly into the site, and then uses our `speech_to_text()` utility to transcribe the audio, and then our `optimizer()` utility to optimize the transcript for the agent. The second audio option, **_"Audio File Option"_**, allows the user to upload an audio file, and then uses the same utilities as the first option to transcribe and optimize the transcript.
 
 <br>
 
 ```python
+with st.expander(":blue[Audio Input]", icon=":material/speaker:"):
+    c1, c2 = st.columns(2, border=True)
+
+    with c1:
+        st.header("Recording Option")
+        audio_record = st.audio_input("Record your conversation here!")
+        if audio_record:
+            st.session_state["last_entry"] = optimizer(speech_to_text(audio_record))
+            st.session_state["last_response"] = None
+
+    with c2:
+        st.header("Audio File Option")
+        audio_file = st.file_uploader(
+            "Choose an audio file to input!", type=["wav", "mp3", "m4a"]
+        )
+        if audio_file:
+            st.session_state["last_entry"] = optimizer(speech_to_text(audio_file))
+            st.session_state["last_response"] = None
+
 ```
 
 <br>
@@ -167,11 +185,30 @@ The
 
 <br>
 
-The
+The next input option is our file input option, which again uses an `st.expander()` block to house two different file input options, the first being a **_"PDF File Option"_**, which allows the user to upload a PDF file, and then uses our `extract_text()` utility to extract the text from the PDF, and then optimizes it for the agent. The second option is a **_"Text based File Option"_**, which allows the user to upload a text based file, such as a .txt or .html file, and then decodes the file, and optimizes it for the agent.
 
 <br>
 
 ```python
+with st.expander(":blue[File Input]", icon=":material/upload_file:"):
+    c1, c2 = st.columns(2, border=True)
+
+    with c1:
+        st.header("PDF File Option")
+        pdf = st.file_uploader("Choose a PDF to input!", type=["pdf"])
+        if pdf:
+            st.session_state["last_entry"] = optimizer(extract_text(pdf))
+            st.session_state["last_response"] = None
+
+    with c2:
+        st.header("Text based File Option")
+        text_file = st.file_uploader(
+            "Choose a Text based file to input!", type=["txt", "html"]
+        )
+        if text_file:
+            dedoded_file = text_file.getvalue().decode("utf-8")  # type: ignore
+            st.session_state["last_entry"] = optimizer(dedoded_file)
+            st.session_state["last_response"] = None
 ```
 
 <br>
@@ -183,12 +220,18 @@ The
 </div>
 
 <br>
-
-The
+ 
+The last input option is our raw input option, which allows the user to input text directly into the site, this is useful for quick testing, or for users who already have a transcript or text that they want to test, and don't want to go through the process of uploading a file. Again, we optimize the text for the agent before storing it in session state.
 
 <br>
 
 ```python
+with st.expander(":blue[Raw Input]", icon=":material/text_fields:"):
+    st.header("Text Option")
+    text_input = st.text_input("Transcript goes here!", key="text_in")
+    if text_input and text_input != st.session_state["last_entry"]:
+        st.session_state["last_entry"] = optimizer(text_input)
+        st.session_state["last_response"] = None
 ```
 
 <br>
@@ -201,11 +244,21 @@ The
 
 <br>
 
-The
+The final part of our site is where we call our agent, and finally display the results, we first call our agent using the `call()` utility from `/src/utils/agent_call.py`, and then we display the response in a container, if there is no response, we display an info message prompting the user to try one of the input options.
 
 <br>
 
 ```python
+with st.spinner("Awaiting response..."):
+    st.session_state["last_response"] = call(st.session_state["last_entry"])
+
+with st.container(border=True):
+    st.markdown("## :violet[AI Fact Check]", text_alignment="center")
+    if st.session_state["last_response"]:
+        st.markdown(st.session_state["last_response"])
+    else:
+        st.info("No current response available, please try on of the options above!")
+
 ```
 
 <br>

@@ -25,22 +25,22 @@ def extract_text(file) -> str:
     return full_text
 
 
-def optimizer(text:str) -> str:
-    '''The `optimizer` function in Python takes a string as input, removes any newline characters, and
+def optimizer(text: str) -> str:
+    """The `optimizer` function in Python takes a string as input, removes any newline characters, and
     returns the optimized string with leading and trailing whitespaces removed.
-    
+
     Parameters
     ----------
     text : str
         The `optimizer` function takes a string `text` as input, replaces any newline characters with
     spaces, removes any leading or trailing whitespace, and then returns the optimized text.
-    
+
     Returns
     -------
         The `optimizer` function takes a string as input, replaces any newline characters with spaces,
     removes any leading or trailing whitespace, and then returns the modified string.
-    
-    '''
-    text = text.replace("\n", " ") 
+
+    """
+    text = text.replace("\n", " ")
     text = text.strip()
     return text

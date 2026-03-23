@@ -1,5 +1,4 @@
 import streamlit as st
-from dotenv import load_dotenv
 from src.utils.stt import speech_to_text
 from src.utils.text_utilities import optimizer, extract_text
 from src.utils.agent_call import call
@@ -41,7 +40,7 @@ with st.expander(":blue[Audio Input]", icon=":material/speaker:"):
 
 with st.expander(":blue[File Input]", icon=":material/upload_file:"):
     c1, c2 = st.columns(2, border=True)
-    
+
     with c1:
         st.header("PDF File Option")
         pdf = st.file_uploader("Choose a PDF to input!", type=["pdf"])
