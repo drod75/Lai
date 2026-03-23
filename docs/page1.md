@@ -20,8 +20,10 @@ When code in one file is heavily dependent on another, a reference to that page 
 <br>
 
 <div>
-  <div class="p-4 border-l-8 border-blue-600 bg-sky-100 rounded-lg shadow-lg">
-    <div class="text-3xl font-bold uppercase text-blue-900 mb-6">Source Folder</div>
+  <div class="header-sky-block">
+    <div class="header-sky">
+      Source Folder
+    </div>
   </div>
 
   <ul class="m-8 list flex flex-col gap-4">
