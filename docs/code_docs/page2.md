@@ -21,7 +21,6 @@ The `main.py` File is where our site comes to life, this is where the the UI tha
 
 ```python
 import streamlit as st
-from dotenv import load_dotenv
 from src.utils.stt import speech_to_text
 from src.utils.text_utilities import optimizer, extract_text
 from src.utils.agent_call import call
@@ -32,8 +31,6 @@ if "last_entry" not in st.session_state:
     st.session_state["last_entry"] = None
 if "last_response" not in st.session_state:
     st.session_state["last_response"] = None
-
-load_dotenv()
 
 
 st.session_state["elevenlabs"] = get_elevenlabs_client()

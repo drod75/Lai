@@ -51,8 +51,8 @@ def call(transcript):
 
 <br>
 
-<div class="header-sky-block">
-    <div class="header-sky">
+<div class="header-fuchsia-block">
+    <div class="header-fuchsia">
         caches.py
     </div>
 </div>
@@ -204,8 +204,8 @@ def speech_to_text(audio):
 
 <br>
 
-<div class="header-fuchsia-block">
-    <div class="header-fuchsia">
+<div class="header-violet-block">
+    <div class="header-violet">
         text_utilities.py
     </div>
 </div>
