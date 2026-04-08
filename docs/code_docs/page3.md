@@ -15,7 +15,7 @@ This is the utils src code sub page!
 
 <br>
 
-tbd
+This function is responsible for calling the agent, it is rate limited to 5 calls per minute, to avoid overloading the agent, and to avoid hitting rate limits on the provider side.
 
 <br>
 
@@ -59,7 +59,7 @@ def call(transcript):
 
 <br>
 
-tbd
+These functions are responsible for caching the ElevenLabs client and the AI agent, to avoid re-initializing them every time they are called, which can be expensive in terms of time and resources.
 
 <br>
 
@@ -98,63 +98,6 @@ def get_ai_agent():
 
 <br>
 
-<div class="sub-header">
-    <div class="sub-header-block">
-        ElevenLabs Caching
-    </div>
-</div>
-
-<br>
-
-tbd
-
-<br>
-
-```python
-@st.cache_resource
-def get_elevenlabs_client():
-    """The function `get_elevenlabs_client` returns an instance of the ElevenLabs client using the API key
-    stored in the secrets.
-
-    Returns
-    -------
-        An instance of the ElevenLabs client with the API key retrieved from the secrets file.
-
-    """
-    return ElevenLabs(api_key=st.secrets["ELEVENLABS_API_KEY"])
-```
-
-<br>
-
-<div class="sub-header">
-    <div class="sub-header-block">
-        AI Agent Caching
-    </div>
-</div>
-
-<br>
-
-tbd
-
-<br>
-
-```python
-@st.cache_resource
-def get_ai_agent():
-    """The function `get_ai_agent` returns an AI agent created using a specified provider and model.
-
-    Returns
-    -------
-        The `get_ai_agent` function is returning an AI agent created using the `agent_pipeline` function
-    with the provider and model specified in the secrets file.
-
-    """
-    return agent_pipeline(provider=st.secrets["PROVIDER"], model=st.secrets["MODEL"])
-
-```
-
-<br>
-
 <div class="header-fuchsia-block">
     <div class="header-fuchsia">
         stt.py
@@ -163,7 +106,7 @@ def get_ai_agent():
 
 <br>
 
-tbd
+This function is responsible for converting speech to text using the ElevenLabs client, it takes an audio file as input and returns the transcribed text.
 
 <br>
 
@@ -212,7 +155,7 @@ def speech_to_text(audio):
 
 <br>
     
-tbd
+This file contains utility functions for text processing, such as extracting text from PDF files and optimizing text by removing newlines and extra whitespace.
 
 <br>
 
@@ -276,7 +219,7 @@ def optimizer(text: str) -> str:
 
 <br>
 
-tbd
+This function is responsible for extracting text from PDF files, it takes a file path as input and returns the concatenated text from all pages.
 
 <br>
 
@@ -315,7 +258,7 @@ def extract_text(file) -> str:
 
 <br>
 
-tbd
+This function is responsible for optimizing text by removing newlines and extra whitespace, it takes a string as input and returns the optimized string.
 
 <br>
 
