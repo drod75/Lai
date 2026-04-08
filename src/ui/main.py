@@ -19,7 +19,17 @@ st.markdown(
     text_alignment="center",
 )
 
-with st.expander(":blue[Audio Input]", icon=":material/speaker:"):
+with st.expander(":violet[Details]", icon=":material/details:"):
+    st.markdown(
+        """
+        Welcome to ***Lai***, the purpose of ***Lai*** is to fact check pieces of conversations, from recorded audio to text transcriptions, ***Lai*** can fact check those pieces of text.
+        There are three options tha are available...
+        1. **Audio:** This allows you to input audio files, or record audio directly to be transcribed.
+        2. **File:** This allows you to input a PDF, or a text based file such as a txt or html file.
+        3. **Raw:** This allows you to just type in text, such as pasting the transcript.
+        """)
+
+with st.expander(":violet[Audio Input]", icon=":material/speaker:"):
     c1, c2 = st.columns(2, border=True)
 
     with c1:
@@ -38,7 +48,7 @@ with st.expander(":blue[Audio Input]", icon=":material/speaker:"):
             st.session_state["last_entry"] = optimizer(speech_to_text(audio_file))
             st.session_state["last_response"] = None
 
-with st.expander(":blue[File Input]", icon=":material/upload_file:"):
+with st.expander(":violet[File Input]", icon=":material/upload_file:"):
     c1, c2 = st.columns(2, border=True)
 
     with c1:
@@ -59,7 +69,7 @@ with st.expander(":blue[File Input]", icon=":material/upload_file:"):
             st.session_state["last_response"] = None
 
 
-with st.expander(":blue[Raw Input]", icon=":material/text_fields:"):
+with st.expander(":violet[Raw Input]", icon=":material/text_fields:"):
     st.header("Text Option")
     text_input = st.text_input("Transcript goes here!", key="text_in")
     if text_input and text_input != st.session_state["last_entry"]:
