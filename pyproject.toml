@@ -17,6 +17,7 @@ dependencies = [
 [project.optional-dependencies]
 notebook = [
     "jupyterlab>=4.5.3",
+    "unsloth>=2026.4.4",
 ]
 gemnini = [
 	"langchain-google-genai>=4.2.0"
