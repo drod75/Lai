@@ -1342,7 +1342,6 @@ name = "lai"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "datasets" },
     { name = "elevenlabs" },
     { name = "langchain" },
     { name = "langchain-tavily" },
@@ -1353,10 +1352,11 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
-gemnini = [
+gemini = [
     { name = "langchain-google-genai" },
 ]
 notebook = [
+    { name = "datasets" },
     { name = "jupyterlab" },
     { name = "seaborn" },
 ]
@@ -1366,11 +1366,11 @@ ollama = [
 
 [package.metadata]
 requires-dist = [
-    { name = "datasets", specifier = ">=4.8.4" },
+    { name = "datasets", marker = "extra == 'notebook'", specifier = ">=4.8.4" },
     { name = "elevenlabs", specifier = ">=2.34.0" },
     { name = "jupyterlab", marker = "extra == 'notebook'", specifier = ">=4.5.3" },
     { name = "langchain", specifier = ">=1.2.8" },
-    { name = "langchain-google-genai", marker = "extra == 'gemnini'", specifier = ">=4.2.0" },
+    { name = "langchain-google-genai", marker = "extra == 'gemini'", specifier = ">=4.2.0" },
     { name = "langchain-ollama", marker = "extra == 'ollama'", specifier = ">=1.0.1" },
     { name = "langchain-tavily", specifier = ">=0.2.17" },
     { name = "pypdf", specifier = ">=6.8.0" },
@@ -1379,7 +1379,7 @@ requires-dist = [
     { name = "seaborn", marker = "extra == 'notebook'", specifier = ">=0.13.2" },
     { name = "streamlit", specifier = ">=1.54.0" },
 ]
-provides-extras = ["notebook", "gemnini", "ollama"]
+provides-extras = ["notebook", "gemini", "ollama"]
 
 [[package]]
 name = "langchain"

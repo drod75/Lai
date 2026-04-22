@@ -20,7 +20,7 @@ notebook = [
     "seaborn>=0.13.2",
     "datasets>=4.8.4",
 ]
-gemnini = [
+gemini = [
 	"langchain-google-genai>=4.2.0"
 ]
 ollama = [
