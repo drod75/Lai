@@ -1,5 +1,5 @@
 ---
-layout: Analysis
+layout: analysis
 title: "Analysis Page"
 ---
 
