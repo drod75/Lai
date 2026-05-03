@@ -24,9 +24,14 @@ def create_model(provider: str, model: str):
     using the provided API key and temperature setting.
 
     """
-    chat_model = init_chat_model(
-        f"{provider}:{model}", api_key=st.secrets["MODEL_API_KEY"], temperature=0.2
-    )
+    if provider == "ollama":
+        chat_model = init_chat_model(
+            f"{provider}:{model}", temperature=0.2
+        )
+    else:
+        chat_model = init_chat_model(
+            f"{provider}:{model}", api_key=st.secrets["MODEL_API_KEY"], temperature=0.2
+        )
     return chat_model
 
 
