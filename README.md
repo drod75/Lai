@@ -27,6 +27,7 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
+- [Extra Information](#extra-information)
 - [Contributing](#contributing)
 - [License](#license)
 </details>
@@ -63,10 +64,14 @@ Image of the projected project timeline.
 
 The future of Lai is interesting, while the tools and foundation is built, there are many other paths that can branch off from this project. Future goals are below
 - [x] Fine tuning a custom model
+- [ ] Statistics
+- [ ] More developed analysis
+- [ ] Results Export
 - [ ] Speech Analysis
 - [ ] Real Time Analysis
 - [ ] Active domain registry to determine if a website is credible or not
 - [ ] Command Line Interface
+- [ ] Users + Ranked Lying Leaderboards
 
 ## Features
 
@@ -76,7 +81,7 @@ The following technologies were utilized to build the Lai assistant:
 * **Language**
     - [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 
-* **AI & Logic**]
+* **AI & Logic**
     - [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)](https://www.langchain.com/)
 
 * **Tools & Voice**
@@ -121,6 +126,14 @@ To get a local copy of the project up and running, follow the instructions below
 
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
+
+## Extra Information
+
+Lai comes with langchain ollama and gemini, but due to the agent's well designed nature, any llm provider with langchain support can be used, so OpenAI, Mistral, etc. Provider list with packages here: [LangChain Provider Integrations](https://docs.langchain.com/oss/python/integrations/providers/overview).
+
+Input options are either **audio**, **files**, or **text**. For audio, the user can record themselves, or input an audio file, such as an mp4. For files, the user can input a PDF file, or files such as an html/htm, or text file. For text, the user can simply type in their statement, or copy and paste it in.
+
+The `docs` folder is where the documentation github page is deployed from, it serves only to provide more information about the project, and is not needed to run the project, but reading it via the github page can prove useful.
 
 ## Contributing
 Contributions to this repository are welcome! If you wish to contribute, please follow the guidelines below.
