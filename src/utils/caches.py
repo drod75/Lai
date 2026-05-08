@@ -1,6 +1,7 @@
 from src.agent.agent import agent_pipeline
 from elevenlabs.client import ElevenLabs
 import streamlit as st
+import logging
 
 
 @st.cache_resource
@@ -27,3 +28,19 @@ def get_ai_agent():
 
     """
     return agent_pipeline(provider=st.secrets["PROVIDER"], model=st.secrets["MODEL"])
+
+
+@st.cache_resource
+def setup_logger():
+    logger = logging.getLogger("new_logger")
+    logger.setLevel(logging.INFO)
+
+    formatter = logging.Formatter(
+        "%(asctime)s - %(name)s - %(levelname)s - %(message)s - line %(lineno)s"
+    )
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+
+    logger.addHandler(stream_handler)
+
+    return logger

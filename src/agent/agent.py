@@ -25,9 +25,7 @@ def create_model(provider: str, model: str):
 
     """
     if provider == "ollama":
-        chat_model = init_chat_model(
-            f"{provider}:{model}", temperature=0.2
-        )
+        chat_model = init_chat_model(f"{provider}:{model}", temperature=0.2)
     else:
         chat_model = init_chat_model(
             f"{provider}:{model}", api_key=st.secrets["MODEL_API_KEY"], temperature=0.2
@@ -141,9 +139,34 @@ def agent_pipeline(provider: str, model: str):
         An agent object is being returned from the agent_pipeline function.
 
     """
-    chat_model = create_model(provider, model)
-    system_prompt = create_prompt()
-    tools = create_tools()
-    agent = create_agent(model=chat_model, tools=tools, system_prompt=system_prompt)
+    chat_model = None
+    try:
+        chat_model = create_model(provider, model)
+    except Exception as e:
+        st.session_state["logger"].error(
+            f"**Error**: Failed to create LangChain model object!\n{e}"
+        )
+
+    system_prompt = None
+    try:
+        system_prompt = create_prompt()
+    except Exception as e:
+        st.session_state["logger"].error(
+            f"**Error**: Failed to create Agent System prompt!\n{e}"
+        )
+
+    tools = None
+    try:
+        tools = create_tools()
+    except Exception as e:
+        st.session_state["logger"].error(f"**Error**: Failed to establish tools!\n{e}")
+
+    agent = None
+    try:
+        agent = create_agent(model=chat_model, tools=tools, system_prompt=system_prompt)
+    except Exception as e:
+        st.session_state["logger"].error(
+            f"**Error**: Failed to initialize LangChain Agent Object!\n{e}"
+        )
 
     return agent
