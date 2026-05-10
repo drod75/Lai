@@ -1,5 +1,5 @@
 import streamlit as st
-from src.utils.caches import setup_logger
+from src.utils.caches import setup_logger, get_ai_agent, get_elevenlabs_client
 
 # page configuration for users
 st.set_page_config(
@@ -8,8 +8,29 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed",
 )
+if "last_entry" not in st.session_state:
+    st.session_state["last_entry"] = None
+if "last_response" not in st.session_state:
+    st.session_state["last_response"] = None
 
-st.session_state["logger"] = setup_logger()
+try:
+    st.session_state["logger"] = setup_logger()
+except Exception as e:
+    st.error(icon="🚨", body="*Error*: Logger not loading properly\n{e}")
+
+try:
+    st.session_state["elevenlabs"] = get_elevenlabs_client()
+except Exception as e:
+    st.session_state["logger"].error(
+        f"**Error**: Failed to establish ElevenLabs Client!\n{e}"
+    )
+
+try:
+    st.session_state["agent"] = get_ai_agent()
+except Exception as e:
+    st.session_state["logger"].error(
+        f"**Error**: Failed to establish Lai AI-Agent!\n{e}"
+    )
 
 
 # readme page function
