@@ -32,6 +32,14 @@ def get_ai_agent():
 
 @st.cache_resource
 def setup_logger():
+    """The function `setup_logger` creates and configures a logger named "new_logger" in Python.
+
+    Returns
+    -------
+        A logger object named "new_logger" with INFO level logging and a stream handler with a specific
+    formatter is being returned.
+
+    """
     logger = logging.getLogger("new_logger")
     logger.setLevel(logging.INFO)
 

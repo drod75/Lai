@@ -2,26 +2,6 @@ import streamlit as st
 from src.utils.stt import speech_to_text
 from src.utils.text_utilities import optimizer, extract_text
 from src.utils.agent_call import call
-from src.utils.caches import get_ai_agent, get_elevenlabs_client
-
-if "last_entry" not in st.session_state:
-    st.session_state["last_entry"] = None
-if "last_response" not in st.session_state:
-    st.session_state["last_response"] = None
-
-try:
-    st.session_state["elevenlabs"] = get_elevenlabs_client()
-except Exception as e:
-    st.session_state["logger"].error(
-        f"**Error**: Failed to establish ElevenLabs Client!\n{e}"
-    )
-
-try:
-    st.session_state["agent"] = get_ai_agent()
-except Exception as e:
-    st.session_state["logger"].error(
-        f"**Error**: Failed to establish Lai AI-Agent!\n{e}"
-    )
 
 st.markdown("# :violet[Lai 🤖]", text_alignment="center")
 st.markdown(
